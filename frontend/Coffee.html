@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Machine</title>
+    <style>
+      body {
+        background-image: url("https://moewalls.com/wp-content/uploads/2024/02/lofi-coffee-shop-morning-city-thumb.jpg");
+        background-size: cover;
+        position: relative;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        overflow: hidden;
+      }
+      header img {
+        height: 10%;
+        width: 10%;
+        border-radius: 50%;
+        scale: 1;
+      }
+      header img:hover {
+        scale: 1.1;
+        transition: all ease-in-out 0.3s;
+      }
+      .type {
+        position: absolute;
+        right: 0%;
+        top: 0%;
+      }
+      .type img {
+        border-radius: 20px;
+      }
+      footer {
+        position: fixed;
+        width: 70%;
+        height: 45%;
+        bottom: 0%;
+        right: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    footer img {
+          width: 100%;
+          height: 150%;
+      }
+      button {
+        border-radius: 10px;
+        height: 50px;
+        width: 100px;
+      }
+      .brew {
+        border-radius: 10px;
+        width: 100px;
+        scale: 1;
+        border: 1px solid black;
+        background-color: gainsboro;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .brew:active {
+        scale: 0.9;
+        background-color: azure;
+      }
+      .coffee {
+        color: wheat;
+      }
+      .vid {
+        display: inline;
+        height: 500px;
+        width: 450px;
+      }
+      .container {
+        color: rgb(241, 207, 207);
+      }
+      main {
+        position: absolute;
+        top: 0%;
+        left: 40%;
+
+      }
+      .coffee{
+        font-size: 200%;
+        font-family: serif;
+        color: rgb(121, 109, 105);
+      }
+      .brew{
+        margin-top: 10vh;
+      }
+      .container{
+        font-size: 200%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2017/05/attachment_73850230-e1493747439213.jpg?auto=format&q=60&fit=max&w=930"
+      />
+    </header>
+    <div class="type">
+      <img
+        src="https://img.freepik.com/free-vector/coffee-types_23-2148558571.jpg?size=626&ext=jpg&ga=GA1.1.1300271404.1711039288&semt=ais_user"
+      />
+    </div>
+    <main>
+      <button>Add Coffee</button>
+      <div class="coffee"></div>
+      <footer>
+        <img
+          src="https://img.freepik.com/premium-photo/coffee-time-aerial-view-different-types-coffee_35691-16994.jpg?w=1380"
+        />
+      </footer>
+    </main>
+    <div class="brew"></div>
+    <div class="container"></div>
+    <script>
+      const randomDelay = () => {
+        return new Promise((resolve, reject) => {
+          timeout = Math.floor(Math.random() * (10 - 5)) + 5;
+          setTimeout(() => {
+            resolve();
+          }, timeout * 1000);
+        });
+      };
+      async function main() {
+        let o = localStorage.getItem("drink");
+        if (o) {
+          document.querySelector(".coffee").innerHTML = o;
+          document.querySelector(".brew").innerHTML = "Brew the Coffeee";
+        }
+        document.querySelector("button").addEventListener("click", async () => {
+          let x = prompt("Enter the Coffee you want to make");
+          localStorage.setItem("drink", x);
+          document.querySelector(".coffee").innerHTML = x;
+        });
+        document.querySelector(".brew").addEventListener("click", async () => {
+          document.querySelector(".container").innerHTML = "";
+          document.querySelector(".brew").innerHTML = "Preparing your Coffee";
+          let vid = document.createElement("video");
+          vid.setAttribute("class", "vid");
+          vid.setAttribute("src", "coffee.mp4");
+          vid.setAttribute("autoplay", "");
+          vid.setAttribute("loop", "");
+          document.querySelector(".container").append(vid);
+          await randomDelay();
+          document.querySelector(".brew").innerHTML = "Brew the Coffeee";
+          document.querySelector(".vid").remove();
+          document.querySelector(".container").innerHTML =
+            "Your " + o + " has been prepared.";
+        });
+      }
+      main();
+    </script>
+  </body>
+</html>

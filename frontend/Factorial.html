@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial of a Number</title>
+</head>
+<body>
+    <script>
+        var num = prompt("Enter a Number to calculate Factorial")
+        let arr = []
+        for (let i = 0; i < num; i++) {
+            arr[i] = i + 1;
+        }
+        const fact = (a,b) => {
+            return a*b;
+        }
+        alert(`The result is ${eval(`${arr.reduce(fact)}`)}`)
+    </script>
+</body>
+</html>

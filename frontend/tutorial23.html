@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overflow</title>
+    <style>
+      .box {
+        width: 30vw;
+        height: 10vh;
+        border: 2px solid black;
+        overflow:scroll;
+        /* If we select auto the text is overflowing it will create a scrollbar */
+        /* white-space: nowrap;
+        text-overflow: ellipsis; */
+        /* This will create dots for more text remaining */
+        /* overflow-x: hidden;
+        overflow-y: hidden;
+        Instead of this we can also do */
+        /* overflow: hidden hidden; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+      nostrum sint voluptates hic magni! Possimus veniam ullam impedit
+      voluptate? Consectetur suscipit iste maxime tenetur fuga. Dolores,
+      voluptates maxime iste optio quos libero!
+    </div>
+  </body>
+</html>

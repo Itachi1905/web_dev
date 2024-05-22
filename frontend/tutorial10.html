@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        p{border: 2px solid red;}
+        .RedElement{color: red;}
+        .BgBlue{background-color: blue;}
+        footer,span{background-color: pink;}
+        /* This is called Attribute Selector it also has a specificity of 10 */
+        [data-x=a]{ color: maroon; }
+    </style>
+    <!-- The Specificity of Selectors is
+    Inline Selector(1000) then ID Selector(100) then Class Selector(10) then Element Selector(1) then Universal Selector(0) -->
+    <!-- We can calculate Specificity using this -->
+</head>
+<body>
+    <!-- . is used for class selector and # is used for ID selector and for Group Selectors just use , and add two Selectors-->
+    <h2>CSS Selectors</h2>
+    <p class="BgBlue">This is a Simple paragraph to demonstrate CSS Selectors</p> 
+    <!-- ID selector -->
+    <p id="secondPara" class="RedElement">Another paragraph</p>
+    <div>
+        <p data-x="a">
+            This will also be red
+        </p>
+        <footer>This is footer</footer>
+    </div>
+</body>
+</html>

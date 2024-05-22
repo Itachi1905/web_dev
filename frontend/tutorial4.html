@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>This is Form Tutorial</h2>
+    <form action="backend.php">
+        <label for="name"> Name</label>
+        <div>
+        <input type="text" name="myname" id="name">
+        </div>
+        <br>
+        <div>
+            Role : <input type="text">
+        </div>
+        <br>
+        <div>
+            EMail : <input type="email" name="myname">
+        </div>
+        <input type="date">
+        <br>
+        Eligible : <input type="checkbox" value="Eligibility" checked>
+        <br>
+        Bonus<input type="number" value="Bonus">
+        <br>
+        <div>
+            Gender : Male<input type="radio" value="myGender"> Female<input type="radio" value="myGender">
+        </div>
+        <br>
+        Write About YourSelf : 
+        <br>
+        <textarea name="myText" cols="30" rows="10"></textarea>
+        <br>
+        <label for="car">Car</label>
+        <select name="myCar" id="car">
+            <option value="ind">Indica</option>
+            <option value="swf" selected>Swift</option>
+            <option value="JAm">JAm</option>
+        </select>
+    </div>
+    <br>
+    <input type="submit" value="Submit Now">
+    <div>
+        <div>
+            Reset Now: <input type="reset">
+        </div>
+    </form>
+</body>
+</html>

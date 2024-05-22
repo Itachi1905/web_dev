@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Float and Clear</title>
+    <style>
+      .cards {
+        border: 2px solid black;
+        display: flow-root;
+        /* Using Flow Root we can prevent Overflow */
+      }
+      img {
+        float: right;
+      }
+      .card {
+        border: 2px solid red;
+      }
+      .card:nth-child(3) {
+        background-color: aqua;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <img src="Image.jpg" alt="Error Loading the Image" width="230" />
+      <div class="card">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, a iste
+        deserunt rem blanditiis ipsam perspiciatis exercitationem consequatur
+        iusto enim modi tempora. Optio, est.
+      </div>
+      <div class="card">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
+        doloribus omnis eveniet tempora quam, ab tenetur necessitatibus totam
+        aperiam? Officiis esse est labore rem! Accusamus perferendis dolorem
+        officiis dolorum vitae possimus pariatur. Similique, dignissimos
+        excepturi in veritatis autem quae nobis porro voluptatum. Sed quia,
+        porro eaque dolorum voluptatum dolore, neque, alias nesciunt explicabo
+        reiciendis adipisci dolorem quod quisquam accusamus voluptatibus omnis
+        veniam magni doloremque ex nobis libero obcaecati? Ullam consectetur
+        officia culpa voluptates velit quas earum excepturi minima consequatur
+        iste, fugiat dicta laudantium itaque quasi. Molestias, consequatur.
+        Assumenda neque omnis dolorem debitis, error corrupti voluptates velit
+        eum repellendus dicta. Consectetur consequuntur laboriosam quibusdam
+        velit eos? Rerum mollitia explicabo deserunt alias quibusdam nam,
+        suscipit doloribus distinctio eligendi corporis, accusantium odio
+        soluta.
+      </div>
+      <div class="card">Card 3</div>
+    </div>
+    <!-- .cards>.card*3 -->
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing Elements by JS</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" data-createdby="kurumi">
+            Hey I am a BOX
+        </div>
+        <div class="box">
+            Hey I am a BOX
+        </div>
+    </div>
+    <script>
+        // document.querySelector(".container").innerHTML
+        // document.querySelector(".container").innerHTML = " Hey I am not a BOX"
+        // document.querySelector(".container").outerHTML
+        // document.querySelector(".container").tagName
+        // document.querySelector(".container").nodeName
+        // document.querySelector(".container").textContent
+        // document.querySelector(".container").innerText
+        // document.querySelector(".container").hidden = true
+        // document.querySelector(".box").setAttribute("style" , "display: inline")
+        // document.designMode = "on"
+        // document.querySelector(".box").dataset
+        // document.querySelector(".box").remove
+        let div = document.createElement("div");
+        div.innerHTML = "I have been introduced <b> by Ankit </b>"
+        div.setAttribute("class","created");
+        document.querySelector(".container").append(div)
+        // document.querySelector(".container").before(div)
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("afterend","<b>I am getting added</b>") 
+        document.querySelector(".container").classList
+        document.querySelector(".container").classList.add("oh")
+        document.querySelector(".container").classList.toggle("red")
+        // document.querySelector(".container").classList.toggle("red")
+    </script>
+</body>
+</html>

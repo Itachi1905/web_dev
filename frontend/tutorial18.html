@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar Demo</title>
+    <style>
+        .navbar{
+            background-color: rgb(11, 10, 10);
+            border-radius: 30px;
+        }
+        .navbar ul{
+            overflow: auto;
+            /* If we dont do this the content will overflow from the list and the background color will not appear */
+        }
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 13px 20px;
+            padding-top: 8px;
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        /* .navbar li a:hover {
+            color: red;
+
+        } */
+        .search{
+            float: right;
+            color: aqua;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 30px;
+            padding: 5px 17px;
+            width: 200px;
+        }
+        #ab a:hover{
+          color: aqua;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li id="ab"><a href="www.google.com">Home</a></li>
+          <li id="bc"><a href="#">About</a></li>
+          <li id="cd"><a href="#">Services</a></li>
+          <li id="de"><a href="#">Contact Us</a></li>
+          <div class="search">
+            <input type="search" id="search" placeholder="This is search">
+          </div>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

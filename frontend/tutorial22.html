@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows and Outlines</title>
+    <style>
+        .box{
+            margin: 2px 2px;
+            border: 2px solid black;
+            padding: 3px;
+            box-shadow: 5px 15px 5px 1px #888888;
+            /* bpc-shadow: h-offset v-offset blur spread color inset */
+        }
+        .para{
+            text-shadow: 2px 2px 4px grey;
+            outline: 2px solid black;
+            border: 3px solid black;
+            outline-offset: 22px;
+            border-radius: 10px;
+        }
+        /* Outline distance can be  increased from text but border cannot */
+        /* to make the Outline curvey we can use border radius */
+        /* outline: width style color */
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a BOX
+        <p class="para">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum accusantium id vero harum. Culpa nihil accusamus, sint esse, cumque dolorum itaque minus, quia rem a laboriosam quis tenetur. Iusto sapiente optio obcaecati?
+        </p>
+    </div>
+</body>
+</html>

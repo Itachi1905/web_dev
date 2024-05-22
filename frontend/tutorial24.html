@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variable</title>
+    <style>
+        :root{
+            --color:rgb(231, 79, 29);
+            --seccolor:#16e1ec;
+            --defpad:23px;
+            --defop:0.2;
+            /* Using this we can change the color of the Website easily. */
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            background-color: var(--color);
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            opacity: var(--defop);
+            list-style: none;
+            padding: var(--defpad);
+            border: 2px solid var(--seccolor);
+        }
+        ul li:first-child{
+            --color: rgb(255,0,247);
+            background-color: var(--color, blue);
+        }
+        .container{
+            background-color: var(--seccolor);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="container">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo nemo
+      sit accusantium unde repudiandae molestias, praesentium, consectetur
+      excepturi nihil similique animi ipsum. Obcaecati blanditiis modi impedit
+      officiis, neque saepe beatae sequi! Qui ullam eveniet architecto fuga
+      facere quia, sunt vero magnam consequuntur similique vitae error?
+    </div>
+  </body>
+</html>

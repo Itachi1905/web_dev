@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball</title>
+    <style>
+      main {
+        width: 80vw;
+        height: 80vh;
+        background-color: rgb(151, 252, 252);
+        display: flex;
+        justify-content: left;
+        align-items: flex-end;
+        /* align-items: baseline; */
+        padding: 10px;
+      }
+      .ball {
+        position: relative;
+        height: 10vh;
+        width: 10vh;
+        /* border-radius: 50%; */
+        background-color: rgb(90, 249, 96);
+        /* flex-grow: 1; */
+        animation: anime_x 4s linear 2s infinite alternate,
+          anime_y1 0.5s ease-out 2s infinite alternate, anim 5s ease-in-out 2s infinite;
+          /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      }
+      @keyframes anime_x {
+        from {
+          left: 0;
+          /* flex-grow: 1; */
+        }
+        to {
+          left: 100%;
+        }
+      }
+      @keyframes anime_y1 {
+        from {
+          bottom: 0;
+        }
+        to {
+          bottom: 40%;
+        }
+      }
+      @keyframes anim {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            30%{
+                transform: rotate(200deg);
+            }
+            50%{
+                transform: rotate(220deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(310deg);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="ball"></div>
+    </main>
+  </body>
+</html>

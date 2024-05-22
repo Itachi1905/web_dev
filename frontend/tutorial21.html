@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Sizing Units</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        box-sizing: border-box;
+        border: 2px solid grey;
+        background-color: aqua;
+        width: 80vw;
+        margin: auto;
+        /* 100vw will full adjust the content width on the screen */
+      }
+      .container > div >div{
+        font-size: 2em;
+        width: 50%;
+        border: 2px;
+        border-color: solid blue;
+      }
+      .container {
+        box-sizing: border-box;
+        min-width: 80vh;
+        border: 2px solid grey;
+        background-color: aqua;
+        width: 80vw;
+        margin: 23px auto;
+        font-size: 18px;
+        /* em means relative to the mean font size that is 16px */
+        height: 80vh;
+        /* 100vh will fully adjust the content height on the screen */
+    }
+    .container p{
+        font-size: 0.5rem;
+        /* rem means realtive to the font size of the html*/
+      }
+      .mycont{
+        
+        box-sizing: border-box;
+        margin-left: 250px;
+        background-color: red;
+        color: yellow;
+        font-size: 22px;
+        width: 80vw;
+        /* Here vmin is height */
+        /* In mobile phones vmin is width */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">This is BOX</div>
+    <div class="container">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo
+      aspernatur praesentium explicabo eius, at itaque repudiandae voluptate
+      sit! Et, non inventore ratione culpa harum delectus excepturi repellat ex
+      fuga, deserunt laudantium libero quae nostrum earum, facere porro est
+      commodi? Repellendus corporis voluptate debitis quidem dicta aperiam
+      dolorem iusto delectus doloribus, qui culpa animi.
+      <div>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis atque dicta expedita ex eaque aperiam mollitia corrupti dolor, esse culpa, exercitationem veniam labore odio officia, itaque molestias totam sint nobis tenetur officiis quam. Sunt enim laudantium magni inventore accusantium dolor minus dignissimos, in rem, corporis perspiciatis vitae, mollitia illo optio.
+        </div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo earum molestiae qui tempore, possimus unde delectus corporis placeat quia vitae veritatis libero consequatur?
+      </div>
+      <!-- lorem999 expand this to see that width is constant and height willl increase -->
+      </p>
+    </div>
+  </body>
+  <div class="mycont">
+    This is another BOX
+  </div>
+</html>

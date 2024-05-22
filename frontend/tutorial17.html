@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors and More Designing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        .container{
+            border: 2px solid red;
+            font-family: 'Ubuntu';
+            background-color: rgb(223, 245, 201);
+            padding: 34px;
+            margin: 34px;
+            width: 666px;
+            margin-left: 400px;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: grey;
+            background-color: aqua;
+        }
+        a:visited{
+            background-color: yellow;
+        }
+        button:visited{
+            background-color: yellow;
+        }
+        button:hover{
+            color: grey;
+            background-color: aqua;
+        }
+        .btn{
+            font-family: cursive;
+            font-weight: bold;
+            background-color: crimson;
+            padding: 6px;
+            border: none;
+            cursor:pointer;
+            font-size: 13px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3> This is My Heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus sed id, 
+            ipsa laborum cum eius voluptatem maiores minima quam aut facilis et qui 
+            rerum nam cumque distinctio numquam fugiat quasi.</p>
+            <a href="https://youtube.com" class="btn">Read More</a>
+            <button class="btn">
+                <a href="https://google.com">Contact Us</a></button>
+    </div>
+</body>
+</html>

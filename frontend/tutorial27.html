@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More on CSS Selectors</title>
+    <style>
+      /* .boxes:first-child {
+        background-color: rgb(134, 127, 180);
+      } */
+      /* .box::first-line {
+        color: yellow;
+      } */
+      /* .boxes *{
+        color: blue;
+        border: 2px solid grey;
+      }
+      p,a,.box,[data-color="primary"] {
+        padding-top: 40px;
+      } */
+      /* .box:nth-child(even){
+        background-color: green;
+      } */
+      /* .box:nth-last-child(2){
+        background-color: aqua;
+      } */
+      .boxes::before{
+        content: "Harry is good";
+      }
+      .boxes::after{
+        content: "Sigma Course is also good";
+        color: red;
+        /* These are called Pseudo Elements */
+      }
+      ::selection{
+        background-color: black;
+        color: aqua;
+      }
+      .box::first-letter{
+        color: purple;
+        font-size: 45px;
+      }
+      input::placeholder{
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div data-color="primary" class="box">I am First BOX</div>
+      <div class="box">Hey I am a BOX</div>
+      <div class="box">Hey I am a BOX</div>
+      <input type="text" placeholder="Type your name here">
+    </div>
+  </body>
+</html>

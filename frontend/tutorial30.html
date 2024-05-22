@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Grids</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "nav nav nav" "side article article" "footer footer footer";
+        }
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            background-color: rgb(49, 208, 252);
+            /* width: 55px; */
+        }
+        #item1{
+            grid-area: nav;
+        }
+        #item2{
+            grid-area: side;
+        }
+        #item3{
+            grid-area: article article;
+        }
+        #item4{
+            grid-area: footer;
+        }
+        #item5{
+            grid-area: nav;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1">1</div>
+        <div class="item" id="item2">2</div>
+        <div class="item" id="item3">3</div>
+        <div class="item" id="item4">4</div>
+        <div class="item" id="item5">5</div>
+    </div>
+</body>
+</html>

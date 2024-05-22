@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart Totalizer</title>
+  </head>
+  <style>
+    .add{
+        border: 2px solid black;
+    }
+    .item{
+        background-color: wheat;
+    }
+    .cost{
+        background-color: wheat;
+    }
+  </style>
+  <body>
+    <div class="add">Add Items</div>
+    <div class="box"></div>
+    <script>
+        let arr = [];
+        let k = 0;
+      document.querySelector(".add").addEventListener("click", () => {
+        let item = prompt("Enter your Item Name");
+        let cost = prompt("Enter your Item Cost");
+
+        let a = document.createElement("div");
+        a.setAttribute("class","item");
+        a.innerHTML = item;
+        let b = document.createElement("div");
+        b.setAttribute("class","cost");
+        b.innerHTML = cost;
+        
+        document.querySelector(".box").append(a);
+        document.querySelector(".box").append(b);
+        if( k == 0 ) {
+            let x = document.createElement("div");
+            x.setAttribute("class","total")
+            x.innerHTML = "Total";
+            document.querySelector("body").append(x);
+        }
+        arr[k++] = cost;
+        let p = k;
+        let sum = 0;
+        while(p--) {
+            sum = parseInt(sum) + parseInt(arr[p]); 
+        }
+        document.querySelector(".total").innerHTML = "Total:" + sum;
+      });
+    //   console.log(sum(...arr));
+    </script>
+  </body>
+</html>

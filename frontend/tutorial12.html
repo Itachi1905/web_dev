@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts in CSS</title>
+    <!-- We just need to link the site containing the font in the head tag -->
+    <style>
+        p{
+            font-family: cursive;
+            font-size: 34px;
+            line-height: 8.3em; 
+            /* Here em means the parent font size */
+            /* Pixel is 1/96th of a Inch */
+        }
+        span{
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* Font stack just passes the function if the font is not available in the family */
+    </style>
+</head>
+<body>
+    <h3>CSS Fonts</h3>
+    <!-- Google fonts is the best way to import fonts from the websites which are not available in the system -->
+    <!-- Web saved fonts are those which are pre installed in the operating system -->
+    <p>Let's play with <span>Fontssss </span>Fonts</p>
+</body>
+</html>

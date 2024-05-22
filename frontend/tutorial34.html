@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        /* img{
+            filter: blur(10px);
+        } */
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        #img1{
+            filter: brightness(300%) contrast(74%);
+        }
+        #img2{
+            filter: grayscale(20%);
+            filter: opacity(0.5);
+        }
+        #img3{
+            filter: sepia(50%);
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Image5.jpg" alt="error" id="img1">
+        <img src="Image6.jpg" alt="error" id="img2">
+        <img src="Image7.jpg" alt="error" id="img3">
+    </div>
+</body>
+</html>
