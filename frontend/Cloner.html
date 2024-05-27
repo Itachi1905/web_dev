@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Div Example</title>
+</head>
+
+<body>
+    <div id="cloner">
+        <p>This is a paragraph inside the original div.</p>
+        <span>And here is a span.</span>
+    </div>
+
+    <button id="copyButton">Copy Div</button>
+
+    <div class="grid_grid">
+        <!-- Cloned divs will be appended here -->
+    </div>
+
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function () {
+            cloner('someLink', 'someName', new Date().getTime());
+        });
+
+        function cloner(link, name, num) {
+            let originalDiv = document.getElementById("cloner");
+
+            // Clone the div element along with all its children
+            let clonedDiv = originalDiv.cloneNode(true);
+
+            // Set a unique ID for the cloned element
+            clonedDiv.setAttribute("id", `clone_${num}`);
+
+            // Append the cloned element to the desired location
+            let container = document.getElementsByClassName("grid_grid");
+            if (container.length > 0) {
+                container[0].appendChild(clonedDiv);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
