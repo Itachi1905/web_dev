@@ -20,7 +20,7 @@ import fs from "fs/promises"
 import fsn from "fs"
 import path from "path"
 
-const basepath = "C:\\Users\\Itachi\\Documents\\VS Code\\Web Development Course\\BackEnd\\exercise1"
+const basepath = "C:\\Users\\Itachi\\Documents\\Visual Studio Code\\web_dev\\backend\\exercise1"
 
 let files = await fs.readdir(basepath)
 

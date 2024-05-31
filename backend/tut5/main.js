@@ -3,7 +3,7 @@ const blog = require('./routes/blog')
 const shop = require('./routes/shop')
  
 
-
+const fs = require("fs")
 const app = express()
 const port = 3000
 
@@ -12,6 +12,7 @@ app.use('/blog', blog)
 app.use('/shop', shop)
 
 app.get('/', (req, res) => {
+    // console.log(fs)
     console.log("Hey its a get request")
     res.send('Hello World21!')
 }).post('/', (req, res) => {
