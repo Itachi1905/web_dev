@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Array</title>
+  </head>
+  <body>
+    <script>
+      //   console.log(arr);
+      async function promie(n) {
+          let prom = new Promise((resolve, reject) => {
+              setTimeout(() => {
+                  resolve();
+              }, 500*n);
+          });
+          return prom;
+      }
+      async function main() {
+        let arr = [1, 2, 3, 4, 5];
+        for (let i = 0; i < arr.length; i++) {
+          let prom = await promie(arr[i])
+          arr[i] = arr[i] * 2;
+          console.log(arr[i]);
+        }
+      }
+      main();
+    </script>
+  </body>
+</html>

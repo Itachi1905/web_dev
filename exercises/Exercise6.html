@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar using FlexBox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* margin-top: 2px; */
+        }
+        body{
+            background-image: url('Image7.jpg');
+            background-size: cover;
+        }
+        nav{
+            /* flex-direction: column; */
+            position: sticky;
+            display: flex;
+            justify-content: center;
+            background: transparent;
+            backdrop-filter: blur(3px);
+            margin-top: 20px;
+            height: 80px;
+        }
+        .ac:hover{
+            -webkit-box-reflect: below
+            1px linear-gradient(transparent,#0005);
+            /* box-shadow: 0 0 5px #5f1912,0 0 15px #5f1912,
+            0 0 25px #5f1912,0 0 15px #5f1912;
+            border-radius: 20px; */
+        }
+        .left{
+            display: flex;
+            /* border: 3px solid black; */
+            justify-content: left;
+            margin-right:150px;
+            margin-top: 6px;
+            margin-left: 5px;
+        }
+        .right{
+            display: flex;
+            justify-content: right;
+            margin-left:400px;
+        }
+        img {
+            /* padding: 10px; */
+            height: 70px;
+            width: 90px;
+            border-radius: 200px;
+        }
+        img:hover{
+            box-shadow: 0 0 5px rgb(8, 120, 120),0 0 15px rgb(8, 120, 120),
+            0 0 25px rgb(8, 120, 120),0 0 15px rgb(8, 120, 120);
+        }
+        .text{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .text1{
+            font-family: monospace;
+            font-size: 30px;
+            color: rgb(74, 221, 254);
+        }
+        .text2{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(101, 186, 173);
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        ul li a{
+            text-decoration: none;
+            font-size: 24px;
+            color: rgb(251, 246, 246);
+            padding: 20px;
+        }
+        .login{
+            display: flex;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #001B2E;
+            background-color: #7fbb26;
+            border-radius: 10px;
+            height: 50px;
+            width: 80px;
+            align-items: center;
+            padding-left: 10px;
+        }
+        .ab{
+            text-decoration: none;
+            font-size: 24px;
+            color: rgb(211, 241, 249);
+            padding: 20px 1.1rem;
+            position: relative;
+            margin-bottom: 5px;
+        }
+        .ab::before,.ab::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transform: scaleX(0);
+            transition: all 0.6s ease;
+        }
+        .ab::before{
+            top: 0;
+            left: 0;
+        }
+        .ab::after{
+            bottom: 0;
+            left: 0;
+            transform-origin: right;
+        }
+        .ab:hover::before,.ab::after{
+            transform: scaleX(1);
+        }
+        .menu_icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 40px;
+        }
+        i{
+            margin-left: 3px;
+            margin-top: 10px;
+        }
+        .anime{
+            display: grid;
+        }
+    </style>
+    <link rel="stylesheet" href="Accordion.css">
+</head>
+<body>
+        <nav>
+            <i data-lucide="menu" class="menu_icon"></i>
+            <div class="left ac">
+                <img src="Image11.png">
+                <div class="text">
+                <div class="text1">
+                    <u><b>BIT Anime</b></u>
+                </div>
+                <div class="text2">
+                    Enjoy bits of each Show
+                </div>
+                </div>
+                </div>
+                <!-- <div class="right"> -->
+                    <ul class="right ac">
+                        <li><a href="#" class="ab">Home&nbsp;&#9674;</a></li>
+                        <li><a href="#" class="ab">Genres&nbsp;&#9674;</a></li>
+                        <li><a href="#" class="ab">Search&nbsp;&#9674;</a></li>
+                        <!-- <li><a href="#">FeedBack&nbsp;&#9674;</a></li> -->
+                        <li><a href="#" class="ab">About&nbsp;&#9674;</a></li>
+                        <li><a href="#"><div class="login">Login</div></a></li>
+                    </ul>
+        </nav>
+        <!-- <div class="anime">
+            <div id="f1">Bleach</div>
+            <div id="f2">Attack on Titans</div>
+            <div id="f3">Naruto</div>
+            <div id="f4">Code Geass</div>
+            <div id="f5">Fate Series</div>
+            <div id="f6">Jujutsu Kaisen</div>
+            <div id="f7">One Piece</div>
+            <div id="f8">Eminenece in Shadow</div>
+            <div id="f9">Black Clover</div>
+            <div id="f10">Reincarnated as a Slime</div>
+        </div> -->
+
+
+
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script>
+          lucide.createIcons();
+        </script>
+</body>
+</html>

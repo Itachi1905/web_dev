@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Videos</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            background-color: #96b5b5;
+        }
+        .container{
+            background-image: url(
+                "Image4.jpg"
+            );
+        }
+        h2{
+            text-align: center;
+            color: rgb(120, 56, 24);
+            font-family: cursive;
+            font-size: 50px;
+            border: 2px;
+            border-color: green;
+            }
+        .box{
+            background-image: url("Image4.jpg");
+            margin: none;
+            padding: none;
+            border: none;
+            text-align: center;
+            margin-left: 10px;
+            height: 50%;
+            width: 100%;
+            display: inline-block;
+        }
+        .video{
+            display: inline;
+            height: 400px;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Here are Some Great Anime Edits</h2>
+        <div class="box">
+            <video src="1.mp4" class="video" id="aa" controls>AMV 1</video>
+            <video src="2.mp4" class="video" id="ab" controls>AMV 2</video>
+            <video src="3.mp4" class="video" id="ac" controls>AMV 3</video>
+        </div>
+        <div class="box">
+            <video src="4.mp4" class="video" id="ad" controls>AMV 4</video>
+            <video src="5.mp4" class="video" id="ae" controls>AMV 5</video>
+            <video src="6.mp4" class="video" id="af" controls>AMV 6</video>
+        </div>
+    </div>
+</body>
+</html>

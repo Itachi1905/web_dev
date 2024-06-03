@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Website Builder</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url("https://images.alphacoders.com/131/1311951.jpg");
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: #646464;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      max-width: 50vw;
+    }
+
+    .card {
+      background-color: #212121;
+      height: 20vh;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      cursor: pointer;
+      position: relative;
+      mix-blend-mode: blend;
+    }
+
+    .image {
+      display: block;
+      width: 14vw;
+      height: 17vh;
+      margin-left: 2vh;
+      margin-right: 2vh;
+      border-radius: 15px;
+    }
+
+    .card>.duration {
+      height: 3.5vh;
+      width: 3.2vw;
+      background-color: #161a1f;
+      padding: 2px;
+      font-size: 15px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 11.5vw;
+      bottom: 2.3vh;
+      overflow: hidden;
+      opacity: 0.85;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .text {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      margin-right: 1vw;
+    }
+
+    .text1 {
+      font-family: cursive;
+      margin-bottom: 1.5vh;
+    }
+
+    .text2,
+    .text3 {
+      color: gray;
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="https://images.alphacoders.com/131/1311951.jpg" class="image" />
+      <div class="duration">20:00</div>
+      <div class="text">
+        <div class="text1">
+          Installing VS Code & How Websites Work | Sigma Web Development Course
+          - #1
+        </div>
+        <div class="text2">
+          Ai Hoshino
+        </div>
+        <div class="text3">
+          7M views • 3 months ago
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="Card_Builder.js"></script>
+</body>
+
+</html>
