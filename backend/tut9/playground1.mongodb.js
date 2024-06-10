@@ -2,7 +2,7 @@
 use('SigmaDatabase');
 
 // Insert a few documents into the courses collection.
-db.getCollection('courses').insertMany([
+db.createCollection('courses').insertMany([
   {
     "name": "Python",
     "Price": 15000,
