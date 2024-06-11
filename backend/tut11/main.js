@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     todo.save() 
     res.send('Hello World!')
 })
-
+ 
 app.get('/a', async (req, res) => { 
     let todo = await Todo.findMany({})
     console.log(todo)
