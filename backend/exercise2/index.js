@@ -44,7 +44,7 @@ app.get("/", async (req, res) => {
     "Sumeru",
     "Fontaine",
   ];
-  let x = 10;
+  let x = 15;
   let results = [];
   while (x--) {
     let a, b, c, d, e;
@@ -59,6 +59,7 @@ app.get("/", async (req, res) => {
     e = Math.floor(Math.random() * (10000000 - 100000 + 1)) + 100000;
 
     const dum = new Dummy({
+      // name: getRandom(as),
       name: name[a],
       salary: e,
       language: lang[b],
