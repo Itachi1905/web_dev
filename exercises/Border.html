@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Animation</title>
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+        }
+        body{
+            background-color: rgb(30, 29, 29);
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            color: whitesmoke;
+        }
+        .card,.con{
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            margin: 0 auto;
+            padding: 2em;
+            height: 250px;
+            width: 300px;
+            text-align: center;
+            background: rgb(68, 66, 66);
+            border-radius: 10px;
+            translate: +50% -50%;
+        }
+
+        @property --angle{
+            syntax: "<angle>";
+                initial-value: 0deg;
+                inherits: false;
+        }
+        .con::after,.con::before{
+            /* --angle: 0deg;not workable */
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            /* background: red; */
+            /* background-image: conic-gradient(from var(--angle),rgb(236, 24, 24),aqua,lightgreen,yellow,pink,rgb(236, 24, 24)); */
+            background-image: conic-gradient(from var(--angle),transparent 40%,blue);
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+            translate: -50% -50%;
+            padding: 3px;
+            border-radius: 10px;
+            animation: 3s spin linear infinite;
+        }
+        .con::before{
+            filter: blur(1.5rem);
+            opacity: 0.5;
+        }
+        @keyframes spin{
+            from{
+                --angle: 0deg;
+            }
+            to{
+                --angle:360deg;
+            }
+                /* variables cannot be given animations */
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+    <div class="card">
+        <h1 style="color: aliceblue;">
+            Animate Borders
+        </h1>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure molestias labore error culpa assumenda rerum consequuntur aperiam voluptatibus recusandae saepe corporis cupiditate, dolorum adipisci voluptate nulla ab et ipsa ad qui veniam est nesciunt vitae commodi expedita! Autem molestiae harum sapiente hic similique debitis, inventore, corrupti maxime laborum soluta quia labore? Voluptatum est deserunt, minus magni pariatur quaerat asperiores dolor?
+        </div>
+        </div>
+</body>
+</html>
